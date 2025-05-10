@@ -1,0 +1,21 @@
+{
+  "User": [
+    {
+      "id": "4edb",
+      "name": "Raja Ram P",
+      "phone": "09345029800",
+      "address": {
+        "building": "276,Sengankadu,Thillaivilagam,thiruthuraipoondi tk,thiruvarur dt",
+        "street": "12",
+        "area": "21",
+        "city": "muthupet"
+      },
+      "product": {
+        "name": "Fresh Potatoes",
+        "img": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500&auto=format&fit=crop",
+        "price": 28,
+        "delivery": "Same day"
+      }
+    }
+  ]
+}

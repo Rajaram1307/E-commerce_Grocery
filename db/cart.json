@@ -1,0 +1,21 @@
+{"Cart": [
+    
+    {
+      "id": "5f9b",
+      "name": "Sweet Oranges",
+      "img": "https://images.unsplash.com/photo-1587731556938-38755b4803a6?w=500&auto=format&fit=crop",
+      "price": 40
+    },
+    {
+      "id": "2ed0",
+      "name": "Fresh Potatoes",
+      "img": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500&auto=format&fit=crop",
+      "price": 28
+    },
+    {
+      "id": "843a",
+      "name": "Fresh Curd",
+      "img": "https://images.unsplash.com/photo-1577047309477-7b596c7f1f3e?w=500&auto=format&fit=crop",
+      "price": 50
+    }
+  ]}
