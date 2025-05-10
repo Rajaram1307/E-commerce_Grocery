@@ -1,12 +1,21 @@
-const jsonServer = require('json-server');
-const express = require('express');
-const path = require('path');
+import jsonServer from 'json-server';
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import catData from './db/cat.json' assert { type: 'json' };
+import productData from './db/product.json' assert { type: 'json' };
+import userData from './db/user.json' assert { type: 'json' };
+
+// ES Modules equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Create server
 const server = express();
 const router = jsonServer.router({
-  products: require('./db/product.json'),
-  users: require('./db/user.json')
+  cats: catData,
+  products: productData,
+  users: userData
 });
 
 // Middlewares
@@ -16,7 +25,7 @@ server.use(jsonServer.bodyParser);
 // API routes
 server.use('/api', router);
 
-// Serve static React files (from Vite build)
+// Serve static React files
 server.use(express.static(path.join(__dirname, 'dist')));
 
 // Handle client-side routing
