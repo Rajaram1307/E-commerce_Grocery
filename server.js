@@ -2,13 +2,19 @@ import jsonServer from 'json-server';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import catData from './db/cat.json' assert { type: 'json' };
-import productData from './db/product.json' assert { type: 'json' };
-import userData from './db/user.json' assert { type: 'json' };
+import { createRequire } from 'module';
+
+// Create require function for JSON imports
+const require = createRequire(import.meta.url);
 
 // ES Modules equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Load JSON files
+const catData = require('./db/cat.json');
+const productData = require('./db/product.json');
+const userData = require('./db/user.json');
 
 // Create server
 const server = express();
